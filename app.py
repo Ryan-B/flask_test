@@ -1,4 +1,5 @@
-# from flask import Flask, render_template, request, redirect, session, flash  # Import Flask to allow us to create our app and render_template to allow us to render index.html
+from flask import Flask
+# , render_template, request, redirect, session, flash  # Import Flask to allow us to create our app and render_template to allow us to render index.html
 app = Flask(__name__)
 # app.secret_key = "ThisIsSecret"
 
