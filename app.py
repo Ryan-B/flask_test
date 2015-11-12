@@ -7,22 +7,22 @@ def index():
 	# return "Hello world"
 	return render_template('index.html')
 
-# @app.route('/success', methods=['post'])
-# def show_data():
-# 	if len(request.form['name']) < 1:
-# 		flash("Name cannot be empty!")
-# 		return redirect ('/') 
-# 	elif len(request.form['comments']) > 120:
-# 		flash("Your comment is TL;DR please keep it under 120 characters.")
-# 		return redirect ('/')
-#   	else:
-#   		session['name'] = request.form['name']
-#   		session['team'] = request.form['team']
-#   		session['location'] = request.form['location']
-#   		session['language'] = request.form['language']
-#   		session['comments'] = request.form['comments']
+@app.route('/success', methods=['post'])
+def show_data():
+	if len(request.form['name']) < 1:
+		flash("Name cannot be empty!")
+		return redirect ('/') 
+	elif len(request.form['comments']) > 120:
+		flash("Your comment is TL;DR please keep it under 120 characters.")
+		return redirect ('/')
+  	else:
+  		session['name'] = request.form['name']
+  		session['team'] = request.form['team']
+  		session['location'] = request.form['location']
+  		session['language'] = request.form['language']
+  		session['comments'] = request.form['comments']
 
-# 	return render_template('success.html')
+	return render_template('success.html')
 	
 if __name__ == "__main__":
 	app.run()
