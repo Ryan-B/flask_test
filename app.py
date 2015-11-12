@@ -1,12 +1,12 @@
-from flask import Flask
-# , render_template, request, redirect, session, flash  # Import Flask to allow us to create our app and render_template to allow us to render index.html
+from flask import Flask, render_template
+ # request, redirect, session, flash  # Import Flask to allow us to create our app and render_template to allow us to render index.html
 app = Flask(__name__)
 # app.secret_key = "ThisIsSecret"
 
 @app.route('/') # The "@" symbol designates a "decorator" which attaches the following function to the '/' route. This means that whenever we send a request to localhost:5000/ we will run the following "hello_world" function.
 def index():
-	return "Hello world"
-	# return render_template('index.html')
+	# return "Hello world"
+	return render_template('index.html')
 
 # @app.route('/success', methods=['post'])
 # def show_data():
