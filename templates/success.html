@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Success</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+	<div id="background">
+	</div>
+		<!-- <img src="/static/don.jpg"> -->
+		<h2>Touchdown {{session['team']}}!</h2>
+
+		<p><span>Name:</span> {{session['name']}}</p>
+		<p><span>Location:</span> {{session['location']}}</p>
+		<p><span>Favorite Language:</span> {{session['language']}}</p>
+		<div id="comments">
+			<p> {{session['comments']}}</p>
+		</div>
+		<a id="back" href ="/"><button>back</button></a>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Python Flask</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+	<div id="wrapper">
+		<h1>HELLO DAWG FANS!</h1>
+
+		<img src="http://static.seattletimes.com/wp-content/uploads/2015/09/a24ff490-5984-11e5-b173-dc3def6a9a3c-1560x1135.jpg">
+
+		{% with messages = get_flashed_messages() %}
+    	{% if messages %}
+      	{% for message in messages %}
+        <p>{{message}}</p>
+      	{% endfor %}
+    	{% endif %}
+  		{% endwith %}
+
+		<form action= "/success" method="post">
+			<input type="text" name="name" placeholder="name"><br>
+			<input type="text" name="team" placeholder="team"><br>
+			Dojo Location:<select id="location_select" name="location">
+				<option value = "Seattle">Seattle</option>
+				<option value = "Kailua-Kona">Kona</option>
+				<option value = "Miami">Miami</option>
+			</select><br>
+			Favorite Language:<select name="language">
+				<option value="Python">Python</option>
+				<option value="Angular">Angular</option>
+				<option value="Javascript">Javascript</option>
+			</select><br>
+				<textarea name = 'comments' placeholder ="comments" rows="4" cols="43"></textarea>
+			<input id="submit" type= "submit"  value="submit">
+		</form>
+	</div>
+</body>
+</html>
+
+
