@@ -18,13 +18,13 @@
 	<div id="background">
 	</div>
 		<!-- <img src="/static/don.jpg"> -->
-		<h2>Touchdown {{session['team']}}!</h2>
+		<h1 id="h1">Touchdown {{session['team']}}!</h1>
 
-		<p>What up {{session['name']}}!?!?</p>
-		<p>{{session['name']}} is live and direct from {{session['location']}}</p>
-		<p>{{session['name']}} is going to say a few words in {{session['language']}}</p>
+		<h2 id="h2">What up {{session['name']}}!?!?</h2>
+		<h2 id="h2">{{session['name']}} is live and direct from {{session['location']}}</h2>
+		<h2 id="h2">{{session['name']}} is going to say a few words in {{session['language']}}</h2>
 		<div id="comments">
-			<p> <i>{{session['comments']}}</i></p>
+			<h2> <i>{{session['comments']}}</i></h2>
 		</div>
 		<a id="back" href ="/"><button>back</button></a>
 </body>
